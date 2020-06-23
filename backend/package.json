@@ -1,15 +1,15 @@
 {
-  "name": "guess_movie_backend",
+  "name": "guess_movie",
   "version": "0.0.1",
-  "description": "Questions and user models inside ",
-  "main": "index.js",
+  "description": "guess movie by picture",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "mocha"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IuliiaSaprykina/Guess_movie.git"
+    "url": "git+https://github.com/IuliiaSaprykina/Guess_movie.git"
   },
   "author": "Iuliia Saprykina",
   "license": "MIT",
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/IuliiaSaprykina/Guess_movie#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "pg": "^8.2.1"
   }
 }
