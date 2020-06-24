@@ -29,7 +29,10 @@ const createUser = (request, response) => {
 
 const login = (request, response) => {
     const { username, password } = request.body
-    database("user").select().where({ username }).first()
+    database("user")
+        .select()
+        .where({ username })
+        .first()
         .then(user => {
             if (!user) throw new Error("No user by that name") 
 
@@ -53,17 +56,30 @@ const login = (request, response) => {
         })
 }
 
-app.post("/users", createUser);
-app.post("/login", login);
-app.get("/users", (request, response) => {
+const allUsers = (request, response) => {
     database("user").select()
         .then(user => {
             response.json({ user })
         })
-});
+}
+
+app.post("/users", createUser);
+app.post("/login", login);
+app.get("/users", allUsers);
 
 
 app.get("/questions", (request, response) => {
+    const token  = request.headers.authorization.split(" ")[1]
+    console.log(token)
+    const secret = "HERESYOURTOKEN";
+    if (!token) {
+        response.sendStatus(401)
+    }
+    const { id } = jwt.verify(token, secret)
+    const user = database("user")
+        .select()
+        .where("id", id)
+        .first()
     database("questions").select()
         .then(questions => {
             response.json({ questions })
