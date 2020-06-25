@@ -15,17 +15,50 @@ app.use(bodyParser.json());
 module.exports = knex(config)
 
 const createUser = (request, response) => {
-   const { username, password } = request.body
-
-   bcrypt.hash(password, 12)
-        .then(hashedPassword => {
-            database("user").insert({
-                username, password_digest: hashedPassword
-            }).returning("*")
-        }).then(users => {
-            response.json({ user: users[0]})
-        })
+    const { username, password } = request.body
+    
+    database("user")
+    .select()
+    .where({ username })
+    .first()
+    .then(user => {
+        if (!user) {
+            return bcrypt.hash(password, 12)
+                .then(hashedPassword => {
+                    return database("user").insert({
+                        username, password_digest: hashedPassword
+                    }).returning("*")
+                })
+                .then(users => {
+                    const secret = "HERESYOURTOKEN"
+                    jwt.sign(users[0], secret, (error, token) => {
+                    
+                    response.json({ token, user: users[0] })
+                    })
+                })
+        }
+            response.send("Please choose another username")
+            // .catch(error => {
+            //     response.status(401).json({
+            //         error: error.message
+            //     })
+            // })
+        
+    })
+    
 }
+
+// const deleteUser = (request, response) => {
+//     let id = parseInt(request.params.id)
+
+//     database("user")
+//     .select()
+//     .where({ id })
+//     .first()
+//     .then(user => {
+//         delete user[id];
+//     })
+// }
 
 const login = (request, response) => {
     const { username, password } = request.body
@@ -86,6 +119,7 @@ function authenticate(request, response, next){
 }
 
 app.post("/users", createUser);
+// app.delete("/users/:id", deleteUser)
 app.post("/login", login);
 app.get("/users", allUsers);
 app.get("/questions", authenticate, (request, response) => {
