@@ -63,23 +63,32 @@ const allUsers = (request, response) => {
         })
 }
 
-app.post("/users", createUser);
-app.post("/login", login);
-app.get("/users", allUsers);
-
-
-app.get("/questions", (request, response) => {
+function authenticate(request, response, next){
     const token  = request.headers.authorization.split(" ")[1]
     console.log(token)
     const secret = "HERESYOURTOKEN";
     if (!token) {
         response.sendStatus(401)
     }
-    const { id } = jwt.verify(token, secret)
+    let id = null
+    try {
+        id = jwt.verify(token, secret)
+    } catch(error){
+        response.sendStatus(403)
+    }
     const user = database("user")
         .select()
         .where("id", id)
         .first()
+
+    request.user = user;
+    next();
+}
+
+app.post("/users", createUser);
+app.post("/login", login);
+app.get("/users", allUsers);
+app.get("/questions", authenticate, (request, response) => {
     database("questions").select()
         .then(questions => {
             response.json({ questions })
