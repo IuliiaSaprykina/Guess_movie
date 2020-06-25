@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () =>{
     const $loginError = document.querySelector('.login-error');
     const newUserForm = document.querySelector('.new-user-form');
     const loginForm = document.querySelector('.login');
+    const inputNewUserForm = document.querySelector('.new-user-form input');
     const createNewUserButton = document.querySelector(".create-new-user");
     const loginButton = document.querySelector(".login-button");
     
 
-    const questionsUrl = "http://localhost:3000/questions/";
     const usersUrl = "http://localhost:3000/users/";
     const loginUrl = "http://localhost:3000/login/";
 
@@ -51,27 +51,51 @@ document.addEventListener("DOMContentLoaded", () =>{
         })
             .then(response => {
                 if(!response.ok) {
-                    $loginError.textContent = "Please check your username or password"
+                    $loginError.textContent = "Please check your username"
                 }
                 return response.json()
             })
             .then(result => {
-                localStorage.setItem("token", result.token);
-                $loginError.textContent = ""
-                // localStorage.setItem("user_id", result.id)
+                if (!result.token){
+                    $loginError.textContent = "Please check your password"
+                } else {
+                    localStorage.setItem("token", result.token);
+                    $loginError.textContent = "";
+                    window.location.href = "./gamePage.html"
+                }
             })
+    })
+
+    newUserForm.addEventListener('submit', (event) => {
+        event.preventDefault();
         
-        
+        const formData = new FormData(event.target);
+        const newUserUsername = formData.get("username");
+        const newUserPassword = formData.get("password");
+        const newUser = {
+            username: newUserUsername,
+            password: newUserPassword,
+            score: 0
+        }
+
+        fetch(usersUrl, {
+            method: "POST",
+            headers: {
+                'Content-type': "application/json"
+            },
+            body: JSON.stringify(newUser)
+        })
+        .then(response => response.json())
+        .then(result => {
+            $userError.textContent = "";
+            localStorage.setItem("token", result.token);
+            window.location.href = "./gamePage.html"
+        })
+        .catch(error => {
+            inputNewUserForm.textContent = ""
+            $userError.textContent = "Please choose another username"
+        })
     })
 
 
-    // fetch(questionsUrl, {
-    //     "Authorization": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJdWxpaWEiLCJwYXNzd29yZF9kaWdlc3QiOiIkMmIkMTIkOGFlQXNUTHp6ZHFsOHFJWHN1cmN0T09BQy9YejV6cWtTaFoxdHpnZ094OHE0SmU5bGFRcVciLCJzY29yZSI6bnVsbCwiaWF0IjoxNTkzMDMyOTc4fQ.D2lfCBmNMo0Z5wNSqHzF1IiZTfmrkTS7gHma9f1YMdI"
-    // })
-    //     .then(parseJSON)
-    //     .then(console.log)
-
-    // function parseJSON(response){
-    //     return response.json();
-    // }
 })
