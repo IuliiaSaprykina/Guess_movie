@@ -7,7 +7,9 @@ startButton.addEventListener('click', startGame)
 function startGame() {
     startButton.classList.add('hide');
     questionContainerElement.classList.remove('hide');
-    console.log(questions())
+    let questionObj = questions().then(response => console.log(response))
+    let questionArr = Object.value(questionObj)
+    console.log(questionArr)
     // setNextQuestion()
 }
 
@@ -19,8 +21,8 @@ function selectAnswer(){
 
 }
 
-function questions () {
-    fetch(questionsUrl, {
+const questions = () => {
+    return fetch(questionsUrl, {
         headers: {
             Authorization: `bearer ${localStorage.getItem("token")}`,
         }
@@ -28,7 +30,6 @@ function questions () {
     .then(response => response.json())
     .then(result => {
         const allQuestions = result.questions
-        console.log(allQuestions)
         let j, x, i;
         for (i = allQuestions.length - 1; i > 0; i--) {
             j = Math.floor(Math.random() * (i + 1));
@@ -38,6 +39,5 @@ function questions () {
         }
     return allQuestions
     })
-    
 }
 
