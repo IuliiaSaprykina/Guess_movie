@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () =>{
+// document.addEventListener("DOMContentLoaded", () =>{
     const $userError = document.querySelector('.user-error');
     const $loginError = document.querySelector('.login-error');
     const newUserForm = document.querySelector('.new-user-form');
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     const createNewUserButton = document.querySelector(".create-new-user");
     const loginButton = document.querySelector(".login-button");
     
-
+console.log(newUserForm)
     const usersUrl = "http://localhost:3000/users/";
     const loginUrl = "http://localhost:3000/login/";
 
@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                     $loginError.textContent = "Please check your password"
                 } else {
                     localStorage.setItem("token", result.token);
+                    localStorage.setItem("user_id", result.user.id);
                     $loginError.textContent = "";
                     window.location.href = "./gamePage.html"
                 }
@@ -87,7 +88,9 @@ document.addEventListener("DOMContentLoaded", () =>{
         })
         .then(response => response.json())
         .then(result => {
+            // console.log(result.user.id)
             $userError.textContent = "";
+            localStorage.setItem("user_id", result.user.id);
             localStorage.setItem("token", result.token);
             window.location.href = "./gamePage.html"
         })
@@ -98,4 +101,4 @@ document.addEventListener("DOMContentLoaded", () =>{
     })
 
 
-})
+// })
