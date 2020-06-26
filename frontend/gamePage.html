@@ -5,28 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gamePage.css">
     <script defer src="gamePage.js"></script>
-    <title>Document</title>
+    <title>Guess movie by picture</title>
 </head>
 <body>
-    <div id="start">Start game</div>
-    <div id="quiz" style="display: none;">
-        <div id="movie-img"><img src=""/></div>
-        <div id="timer">
-            <div id="counter"> 60 </div>
-            <div id="btimeGauge"></div>
-            <div id="timeGauge"></div>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer A</button>
+                <button class="btn">Answer B</button>
+                <button class="btn">Answer C</button>
+                <button class="btn">Answer D</button>
+            </div>
         </div>
-        <div id="choices">
-            <div class="choice" id="A" onclick="checkAnswer('A')"> A </div>
-            <div class="choice" id="B" onclick="checkAnswer('B')"> A </div>
-            <div class="choice" id="C" onclick="checkAnswer('C')"> A </div>
-            <div class="choice" id="D" onclick="checkAnswer('D')"> A </div>
+        <div class="controls">
+            <button id="start-btn">Start Game</button>
         </div>
-        <div id="progress"> <div class="prog"></div> </div>
 
     </div>
-    <div id="scoreContainer" style="display: none;">
-
-    </div>
+    <script src="gamePage.js"></script>
 </body>
 </html>
