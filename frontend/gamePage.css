@@ -21,9 +21,23 @@ body{
     background-color: hsl(var(--hue), 100%, 20%);
 }
 
+.movie-img img{
+    margin-top: 40px;
+    width: 900px;
+    height: 60%;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.movie-img{
+    text-align: center;
+    display: block;
+}
+
 .container{
-    width: 800px;
-    height: 80%;
+    width: 1000px;
+    /* height: 100%; */
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
