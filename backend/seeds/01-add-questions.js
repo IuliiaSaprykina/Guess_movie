@@ -47,7 +47,7 @@ exports.seed = function(knex) {
         }, {   
         shot_src: "http://lavitastella.com/wp-content/uploads/2013/01/pulp-fiction-dance-1024x528.jpg",
         choiceA: "Pulp Fiction (1994)",
-        choiceB: "Fight Club (1999) ",
+        choiceB: "Fight Club (1999)",
         choiceC: "Spirited Away (2001)",
         choiceD: "Modern Times (1936)",
         correct: "Pulp Fiction (1994)"
@@ -164,7 +164,7 @@ exports.seed = function(knex) {
         choiceD: "Witness for the Prosecution (1957)",
         correct: "The Pianist (2002)"
         }, {
-        shot_src: "https://m.media-amazon.com/images/M/MV5BNjI1ZDcyMDYtYmMxMC00ZjlhLTk1NmUtYWE4ZDcxZWQ1NTUxXkEyXkFqcGdeQXVyNjAwODA4Mw@@._V1_.jpg",
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjI3NTQ3MjgzM15BMl5BanBnXkFtZTcwNDIxODY3Mw@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
         choiceA: "Harakiri (1962)",
         choiceB: "American History X (1998)",
         choiceC: "Harakiri (1962)",
@@ -234,12 +234,12 @@ exports.seed = function(knex) {
         choiceD: "Parasite (2019)",
         correct: "The Silence of the Lambs (1991)"
         }, {
-        shot_src: "https://m.media-amazon.com/images/M/MV5BYjE5ZmEyZjctZWNlYi00MzRkLTgzODktMzdhMTQ2ZjNjMTIwXkEyXkFqcGdeQXVyMjMzMDI4MjQ@._V1_SY1000_CR0,0,1329,1000_AL_.jpg",
-        choiceA: "Saving Private Ryan (1998)",
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTc3OTc3NzUyOV5BMl5BanBnXkFtZTcwOTE4Mzg2OA@@._V1_.jpg",
+        choiceA: "The Shining (1980)",
         choiceB: "Modern Times (1936)",
-        choiceC: "Terminator 2: Judgment Day (1991)",
-        choiceD: "It's a Wonderful Life (1946)",
-        correct: "It's a Wonderful Life (1946)"
+        choiceC: "Django Unchained (2012)",
+        choiceD: "Raiders of the Lost Ark (1981)",
+        correct: "Django Unchained (2012)"
         }, {
         shot_src: "https://m.media-amazon.com/images/M/MV5BYjE5ZmEyZjctZWNlYi00MzRkLTgzODktMzdhMTQ2ZjNjMTIwXkEyXkFqcGdeQXVyMjMzMDI4MjQ@._V1_SY1000_CR0,0,1329,1000_AL_.jpg",
         choiceA: "Saving Private Ryan (1998)",
@@ -290,7 +290,7 @@ exports.seed = function(knex) {
         choiceD: "Oldboy (2003)",
         correct: "The Intouchables (2011)"
         }, {
-        shot_src: "https://m.media-amazon.com/images/M/MV5BMTU1NjE1MTk4OF5BMl5BanBnXkFtZTgwMjA0MjQ3MjE@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjM1MDU3NTM5M15BMl5BanBnXkFtZTgwOTkzMjQ3MjE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
         choiceA: "The Hunt (2012)",
         choiceB: "A Separation (2011)",
         choiceC: "Whiplash (2014)",
@@ -304,17 +304,17 @@ exports.seed = function(knex) {
         choiceD: "The Prestige (2006)",
         correct: "The Prestige (2006)"
         }, {
-        shot_src: "https://m.media-amazon.com/images/M/MV5BYjFiOTE0MjUtMTY2Ny00ZjU3LTgwYTQtNDQ5ZGJkZTgzOTYxXkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_.jpg",
-        choiceA: "Once Upon a Time in the West (1968)",
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNzFkOTFjN2EtZjIwYy00MmFlLTk1ODEtZTFkODdlM2UyMzhiXkEyXkFqcGdeQXVyNTgzMzk4NDQ@._V1_.jpg",
+        choiceA: "Apocalypse Now (1979)",
         choiceB: "Paths of Glory (1957)",
         choiceC: "Rear Window (1954)",
         choiceD: "Witness for the Prosecution (1957)",
-        correct: "Once Upon a Time in the West (1968)"
+        correct: "Apocalypse Now (1979)"
         }, {
         shot_src: "https://m.media-amazon.com/images/M/MV5BYjFiOTE0MjUtMTY2Ny00ZjU3LTgwYTQtNDQ5ZGJkZTgzOTYxXkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_.jpg",
         choiceA: "Once Upon a Time in the West (1968)",
-        choiceB: "Paths of Glory (1957) ",
-        choiceC: "Rear Window (1954)",
+        choiceB: "Memento (2000)",
+        choiceC: "Joker (2019)",
         choiceD: "Witness for the Prosecution (1957)",
         correct: "Once Upon a Time in the West (1968)"
         }, {
@@ -352,6 +352,195 @@ exports.seed = function(knex) {
         choiceC: "Psycho (1960)",
         choiceD: "The Lion King (1994)",
         correct: "Alien (1979)" 
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BZmE2NTgxYTYtNTY1Yi00Yzg1LWI5NjctYTY1MjEwNTg0MzEzXkEyXkFqcGdeQXVyMTI3MDk3MzQ@._V1_.jpg",
+        choiceA: "Joker (2019)",
+        choiceB: "Alien (1979)",
+        choiceC: "Memento (2000)",
+        choiceD: "Oldboy (2003)",
+        correct: "Memento (2000)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMDYxMGJjYjUtMjY5YS00MDc5LWEwOGEtNzIyYTA0ZWFmODk2XkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg",
+        choiceA: "Paths of Glory (1957)",
+        choiceB: "Reservoir Dogs (1992)",
+        choiceC: "Requiem for a Dream (2000)",
+        choiceD: "The Lives of Others (2006)",
+        correct: "The Lives of Others (2006)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjI0Nzk4ODctYWNlOC00Njg5LThiNTMtZDNjOTllODNlNWZlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_SX1500_AL_.jpg",
+        choiceA: "Joker (2019)",
+        choiceB: "Cinema Paradiso (1988)",
+        choiceC: "Like Stars on Earth (2007)",
+        choiceD: "The Lives of Others (2006)",
+        correct: "Joker (2019)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BZGJmYzk0YmItNmEzNC00ZDdjLTlhZGMtZjk0MmFlNjVmMzI1XkEyXkFqcGdeQXVyMzQ3Nzk5MTU@._V1_.jpg",
+        choiceA: "Apocalypse Now (1979)",
+        choiceB: "Paths of Glory (1957)",
+        choiceC: "The Hunt (2012)",
+        choiceD: "Amélie (2001)",
+        correct: "Paths of Glory (1957)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BY2U2YTYwN2MtYzUyNS00MDE2LTg3MTgtOWY2YmE3MTIwOGU5XkEyXkFqcGdeQXVyMjMzMDI4MjQ@._V1_SY1000_CR0,0,1775,1000_AL_.jpg",
+        choiceA: "Das Boot (1981)",
+        choiceB: "Toy Story (1995)",
+        choiceC: "The Shining (1980)",
+        choiceD: "High and Low (1963)",
+        correct: "The Shining (1980)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjExNDU3ODAwMV5BMl5BanBnXkFtZTcwNTEwMzMzMw@@._V1_SX1777_CR0,0,1777,740_AL_.jpg",
+        choiceA: "Green Book (2018)",
+        choiceB: "Toy Story (1995)",
+        choiceC: "Monty Python and the Holy Grail (1975)",
+        choiceD: "WALL·E (2008)",
+        correct: "WALL·E (2008)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNDQ5MzE1NjY3OF5BMl5BanBnXkFtZTgwNjQzMjkxMzE@._V1_SY1000_CR0,0,1757,1000_AL_.jpg",
+        choiceA: "Princess Mononoke (1997)",
+        choiceB: "Casablanca (1942)",
+        choiceC: "Oldboy (2003)",
+        choiceD: "WALL·E (2008)",
+        correct: "Princess Mononoke (1997)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjA0MTgwNTM5MV5BMl5BanBnXkFtZTgwOTgyODI4NjM@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
+        choiceA: "Princess Mononoke (1997)",
+        choiceB: "Spider-Man: Into the Spider-Verse (2018)",
+        choiceC: "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)",
+        choiceD: "Avengers: Infinity War (2018)	",
+        correct: "Spider-Man: Into the Spider-Verse (2018)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTcxNDg4NTIzOV5BMl5BanBnXkFtZTgwODU4MjkzNTM@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "Amadeus (1984)",
+        choiceB: "American Beauty (1999)",
+        choiceC: "Avengers: Infinity War (2018)",
+        choiceD: "Your Name. (2016)",
+        correct: "Avengers: Infinity War (2018)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTUzNTk2NTE5OF5BMl5BanBnXkFtZTcwNjU4MTI2NQ@@._V1_SY1000_CR0,0,1519,1000_AL_.jpg",
+        choiceA: "Avengers: Endgame (2019)",
+        choiceB: "American Beauty (1999)",
+        choiceC: "The Dark Knight Rises (2012)",
+        choiceD: "Oldboy (2003)",
+        correct: "Oldboy (2003)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNzI1MTAxOTk1OF5BMl5BanBnXkFtZTcwMjcwMzQxOA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "The Dark Knight Rises (2012)",
+        choiceB: "The Dark Knight (2008)",
+        choiceC: "Saving Private Ryan (1998)",
+        choiceD: "Oldboy (2003)",
+        correct: "The Dark Knight Rises (2012)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BODEzNjAyNjk0OV5BMl5BanBnXkFtZTcwMDEyMzE0NA@@._V1_SY1000_CR0,0,1399,1000_AL_.jpg",
+        choiceA: "Avengers: Endgame (2019)",
+        choiceB: "Once Upon a Time in America (1984)",
+        choiceC: "Saving Private Ryan (1998)",
+        choiceD: "Aliens (1986)",
+        correct: "Once Upon a Time in America (1984)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMzZmNDRmYWUtYzdhZi00Mjk0LWI0OTUtNjRkYTAzNTJhOTY4XkEyXkFqcGdeQXVyODE2MzM5OTM@._V1_SY1000_CR0,0,1333,1000_AL_.jpg",
+        choiceA: "Your Name. (2016)",
+        choiceB: "Once Upon a Time in America (1984)",
+        choiceC: "Saving Private Ryan (1998)",
+        choiceD: "American Beauty (1999)",
+        correct: "Your Name. (2016)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTU4Njg3MDIxN15BMl5BanBnXkFtZTgwNDEzMjMyNDM@._V1_SX1777_CR0,0,1777,743_AL_.jpg",
+        choiceA: "Your Name. (2016)",
+        choiceB: "Coco (2017)",
+        choiceC: "Braveheart (1995)",
+        choiceD: "American Beauty (1999)",
+        correct: "Coco (2017)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTM4NzU3NzM2N15BMl5BanBnXkFtZTcwOTEyODY3Mw@@._V1_SX1450_CR0,0,1450,999_AL_.jpg",
+        choiceA: "Witness for the Prosecution (1957)",
+        choiceB: "Coco (2017)",
+        choiceC: "3 Idiots (2009)",
+        choiceD: "American Beauty (1999)",
+        correct: "American Beauty (1999)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BODYwNzcyMjIxNF5BMl5BanBnXkFtZTgwMDEyNzU5MTE@._V1_SY1000_CR0,0,1492,1000_AL_.jpg",
+        choiceA: "Braveheart (1995)",
+        choiceB: "Bicycle Thieves (1948)",
+        choiceC: "For a Few Dollars More (1965)",
+        choiceD: "Batman Begins (2005)",
+        correct: "Braveheart (1995)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BYjEwNTA2MTQtMjRjYS00OTg0LWEzY2EtMDA0NmI1Y2QzMGU4XkEyXkFqcGdeQXVyMTAxNTY1Nzg1._V1_.jpg",
+        choiceA: "The Dark Knight Rises (2012)",
+        choiceB: "Das Boot (1981)",
+        choiceC: "3 Idiots (2009)",
+        choiceD: "Your Name. (2016)",
+        correct: "3 Idiots (2009)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTQ5ODg4NzgyOV5BMl5BanBnXkFtZTcwNTEzMzc4Mg@@._V1_SY1000_CR0,0,1674,1000_AL_.jpg",
+        choiceA: "Toy Story (1995)",
+        choiceB: "High and Low (1963)",
+        choiceC: "Inglourious Basterds (2009)",
+        choiceD: "Your Name. (2016)",
+        correct: "Toy Story (1995)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTUwODU0NjUyN15BMl5BanBnXkFtZTcwOTI5MTU4Mw@@._V1_SY1000_CR0,0,1278,1000_AL_.jpg",
+        choiceA: "Star Wars: Episode VI - Return of the Jedi (1983)",
+        choiceB: "High and Low (1963)",
+        choiceC: "Good Will Hunting (1997)",
+        choiceD: "Amadeus (1984)",
+        correct: "High and Low (1963)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMWNmMzZhYzMtMWU5ZS00ZDk1LWJhYjMtNDc0MTFkZWYwNThkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjAwNTYwNDg@._V1_SX1777_CR0,0,1777,755_AL_.jpg",
+        choiceA: "Star Wars: Episode VI - Return of the Jedi (1983)",
+        choiceB: "High and Low (1963)",
+        choiceC: "Like Stars on Earth (2007)",
+        choiceD: "Once Upon a Time in America (1984)",
+        correct: "Like Stars on Earth (2007)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTI3OTk5MjA1OF5BMl5BanBnXkFtZTYwNDg3MDk2._V1_.jpg",
+        choiceA: "Full Metal Jacket (1987)",
+        choiceB: "M (1931)",
+        choiceC: "Capernaum (2018)",
+        choiceD: "Amadeus (1984)",
+        correct: "Amadeus (1984)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjI1OTIyMDkzM15BMl5BanBnXkFtZTcwNjgzMTY2Mw@@._V1_SY1000_CR0,0,1492,1000_AL_.jpg",
+        choiceA: "Star Wars: Episode VI - Return of the Jedi (1983)",
+        choiceB: "M (1931)",
+        choiceC: "Reservoir Dogs (1992)	",
+        choiceD: "Amadeus (1984)",
+        correct: "Star Wars: Episode VI - Return of the Jedi (1983)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMDZjNzE1MmItYjBlOC00NDIyLTk3Y2UtZGYyM2Y4MjM2MmM2XkEyXkFqcGdeQXVyMzQ4NjI4MDM@._V1_SX1777_CR0,0,1777,760_AL_.jpg",
+        choiceA: "Star Wars: Episode VI - Return of the Jedi (1983)",
+        choiceB: "Reservoir Dogs (1992)",
+        choiceC: "Toy Story (1995)",
+        choiceD: "1917 (2019)",
+        correct: "Reservoir Dogs (1992)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTU1Mzg1Mzk0Nl5BMl5BanBnXkFtZTcwNDE0OTY3Mg@@._V1_.jpg",
+        choiceA: "Good Will Hunting (1997)",
+        choiceB: "Like Stars on Earth (2007)",
+        choiceC: "Inglourious Basterds (2009)",
+        choiceD: "1917 (2019)",
+        correct: "Inglourious Basterds (2009)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjI4MDAxNDI3N15BMl5BanBnXkFtZTcwODQ5MjU0NQ@@._V1_SY1000_CR0,0,1504,1000_AL_.jpg",
+        choiceA: "Requiem for a Dream (2000)",
+        choiceB: "Like Stars on Earth (2007)",
+        choiceC: "Dangal (2016)",
+        choiceD: "Good Will Hunting (1997)",
+        correct: "Good Will Hunting (1997)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BZGY4ZDdkZjktNzdiNy00NDEzLWE1MTEtZTFlY2Y4NWQ4YjI2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX1777_CR0,0,1777,740_AL_.jpg",
+        choiceA: "1917 (2019)",
+        choiceB: "Like Stars on Earth (2007)",
+        choiceC: "Dangal (2016)",
+        choiceD: "Good Will Hunting (1997)",
+        correct: "1917 (2019)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTQ0OTY4MjIzNV5BMl5BanBnXkFtZTcwOTUyNDMzNQ@@._V1_SX1777_CR0,0,1777,839_AL_.jpg",
+        choiceA: "1917 (2019)",
+        choiceB: "2001: A Space Odyssey (1968)",
+        choiceC: "Dangal (2016)",
+        choiceD: "Braveheart (1995)",
+        correct: "2001: A Space Odyssey (1968)"
         }]);
       });
 };
