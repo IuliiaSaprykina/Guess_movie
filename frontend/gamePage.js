@@ -52,7 +52,13 @@ function parseJSON(response) {
 
 function displayQuestion(questions) {
     
-    
+    for (var i = questions.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * i); // no +1 here!
+        var temp = questions[i];
+        questions[i] = questions[j];
+        questions[j] = temp;
+    }
+    console.log(questions)
     // let j, x, i;
     // for (i = questions.length - 1; i > 0; i--) {
     //     j = Math.floor(Math.random() * (i + 1));
