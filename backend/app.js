@@ -32,7 +32,7 @@ const createUser = (request, response) => {
                 .then(users => {
                     const secret = "HERESYOURTOKEN"
                     jwt.sign(users[0], secret, (error, token) => {
-                    
+                    console.log(users[0])
                     response.json({ token, user: users[0] })
                     })
                 })
@@ -60,6 +60,22 @@ const createUser = (request, response) => {
 //     })
 // }
 
+const updateUser = (request, response) => {
+    const { score } = request.body
+    // const id = request.params.id
+
+    database("user")
+    .select()
+    .where( {id: request.params.id})
+    .update({
+        score: request.body.score
+    })
+    .returning("*")
+    .then(user => {
+        response.json({ user })
+    })
+}
+
 const login = (request, response) => {
     const { username, password } = request.body
     database("user")
@@ -80,7 +96,7 @@ const login = (request, response) => {
                 if (error) throw new Error("Problem signing jwt")
                 
                 // console.log(user, secret, token)
-                response.json({ token })
+                response.json({ token, user })
             })
         }).catch(error => {
             response.status(401).json({
@@ -98,7 +114,7 @@ const allUsers = (request, response) => {
 
 function authenticate(request, response, next){
     const token  = request.headers.authorization.split(" ")[1]
-    console.log(token)
+    // console.log(token)
     const secret = "HERESYOURTOKEN";
     if (!token) {
         response.sendStatus(401)
@@ -118,6 +134,7 @@ function authenticate(request, response, next){
     next();
 }
 
+app.patch("/users/:id", updateUser);
 app.post("/users", createUser);
 // app.delete("/users/:id", deleteUser)
 app.post("/login", login);

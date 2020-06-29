@@ -541,6 +541,181 @@ exports.seed = function(knex) {
         choiceC: "Dangal (2016)",
         choiceD: "Braveheart (1995)",
         correct: "2001: A Space Odyssey (1968)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMDNlYjQ1ZDktZThhNS00ZTg5LWI5ZDUtZDhmYTdkZmRmNzMxXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_.jpg",
+        choiceA: "1917 (2019)",
+        choiceB: "2001: A Space Odyssey (1968)",
+        choiceC: "Capernaum (2018)",
+        choiceD: "Inglourious Basterds (2009)",
+        correct: "Capernaum (2018)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BOTk2MTk5OTEzNV5BMl5BanBnXkFtZTcwNDg3MjU4Mw@@._V1_SY1000_CR0,0,1452,1000_AL_.jpg",
+        choiceA: "Das Boot (1981)",
+        choiceB: "To Kill a Mockingbird (1962)",
+        choiceC: "Oldboy (2003)",
+        choiceD: "Vertigo (1958)",
+        correct: "Vertigo (1958)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTgwNDU3ODk5M15BMl5BanBnXkFtZTgwNjU5OTIwMjE@._V1_SY1000_CR0,0,1517,1000_AL_.jpg",
+        choiceA: "Requiem for a Dream (2000)",
+        choiceB: "Avengers: Endgame (2019)",
+        choiceC: "L.A. Confidential (1997)",
+        choiceD: "A Separation (2011)",
+        correct: "Requiem for a Dream (2000)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTk2MjMxMTk4Nl5BMl5BanBnXkFtZTgwMjU2MDg0MjE@._V1_.jpg",
+        choiceA: "Spider-Man: Into the Spider-Verse (2018)",
+        choiceB: "M (1931)",
+        choiceC: "The Dark Knight Rises (2012)",
+        choiceD: "Django Unchained (2012)",
+        correct: "M (1931)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BZTkyZDNmOWEtOTcxNy00MTY4LWI0NTUtZjk1MDkwMjljODMwXkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_.jpg",
+        choiceA: "2001: A Space Odyssey (1968)",
+        choiceB: "Children of Heaven (1997)",
+        choiceC: "Dangal (2016)",
+        choiceD: "The Gold Rush (1925)",
+        correct: "Dangal (2016)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTg0MjgxMzA1OF5BMl5BanBnXkFtZTcwMjU5ODMyMw@@._V1_SX1777_CR0,0,1777,944_AL_.jpg",
+        choiceA: "Raiders of the Lost Ark (1981)",
+        choiceB: "Paths of Glory (1957)",
+        choiceC: "Dangal (2016)",
+        choiceD: "Eternal Sunshine of the Spotless Mind (2004)",
+        correct: "Eternal Sunshine of the Spotless Mind (2004)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjA5OTA0MTkzNV5BMl5BanBnXkFtZTcwMjA4NTc3Nw@@._V1_SY1000_SX1500_AL_.jpg",
+        choiceA: "The Hunt (2012)",
+        choiceB: "Batman Begins (2005)",
+        choiceC: "Ran (1985)",
+        choiceD: "Howl's Moving Castle (2004)",
+        correct: "The Hunt (2012)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTY1NTgyODA0NV5BMl5BanBnXkFtZTcwMTk3MTc4Mw@@._V1_SY1000_CR0,0,1316,1000_AL_.jpg",
+        choiceA: "WALL·E (2008)",
+        choiceB: "Citizen Kane (1941)",
+        choiceC: "The Shining (1980)",
+        choiceD: "Howl's Moving Castle (2004)",
+        correct: "Citizen Kane (1941)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjMxNjA4NTQwNV5BMl5BanBnXkFtZTcwMTk4NDIwNA@@._V1_SY1000_CR0,0,1526,1000_AL_.jpg",
+        choiceA: "Avengers: Endgame (2019)",
+        choiceB: "Aliens (1986)",
+        choiceC: "Full Metal Jacket (1987)",
+        choiceD: "Braveheart (1995)",
+        correct: "Full Metal Jacket (1987)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BZTlhYWM3NzctMTQ0OC00Mjc0LTlhNTQtNTRkOWQ1M2U4Yzg0XkEyXkFqcGdeQXVyMDc2NTEzMw@@._V1_SX1545_CR0,0,1545,999_AL_.jpg",
+        choiceA: "Monty Python and the Holy Grail (1975)",
+        choiceB: "Rashomon (1950)",
+        choiceC: "Bicycle Thieves (1948)",
+        choiceD: "Green Book (2018)",
+        correct: "Bicycle Thieves (1948)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjc1OTg2MDQ5MV5BMl5BanBnXkFtZTcwMDI2ODUwNA@@._V1_SY1000_CR0,0,1460,1000_AL_.jpg",
+        choiceA: "A Separation (2011)",
+        choiceB: "Toy Story 3 (2010)",
+        choiceC: "The Apartment (1960)",
+        choiceD: "North by Northwest (1959)",
+        correct: "North by Northwest (1959)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTk2OTkwNDU5MV5BMl5BanBnXkFtZTcwMDEzNDMzNQ@@._V1_SY1000_CR0,0,1601,1000_AL_.jpg",
+        choiceA: "A Clockwork Orange (1971)",
+        choiceB: "Full Metal Jacket (1987)",
+        choiceC: "Requiem for a Dream (2000)",
+        choiceD: "Ikiru (1952)",
+        correct: "A Clockwork Orange (1971)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BN2QxZTViZWMtMzgwNC00MmQyLWJhMGUtZmYwZDViNjQ5NzQwXkEyXkFqcGdeQXVyOTg5NzIwMDU@._V1_.jpg",
+        choiceA: "A Clockwork Orange (1971)",
+        choiceB: "The Kid (1921)",
+        choiceC: "1917 (2019)",
+        choiceD: "Incendies (2010)",
+        correct: "The Kid (1921)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjIxMjAzMzUwNl5BMl5BanBnXkFtZTcwNDQ3OTczNQ@@._V1_SY1000_CR0,0,1487,1000_AL_.jpg",
+        choiceA: "Up (2009)",
+        choiceB: "Downfall (2004)",
+        choiceC: "Snatch (2000)",
+        choiceD: "A Beautiful Mind (2001)",
+        correct: "Snatch (2000)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTg5MzI0NDY2NV5BMl5BanBnXkFtZTcwMjY5MzA3NA@@._V1_SY1000_CR0,0,1372,1000_AL_.jpg",
+        choiceA: "Amélie (2001)",
+        choiceB: "North by Northwest (1959)",
+        choiceC: "Snatch (2000)",
+        choiceD: "Singin' in the Rain (1952)",
+        correct: "Singin' in the Rain (1952)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMmMxZmYyYzgtZTZiZC00OTI5LTkyMTYtZmM0ZDRlMjAzOWVhXkEyXkFqcGdeQXVyMDc2NTEzMw@@._V1_SX1516_CR0,0,1516,999_AL_.jpg",
+        choiceA: "Scarface (1983)",
+        choiceB: "To Kill a Mockingbird (1962)",
+        choiceC: "Come and See (1985)",
+        choiceD: "The Great Escape (1963)",
+        correct: "Scarface (1983)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BODg4OTE4MzU4NV5BMl5BanBnXkFtZTgwNjQwNzg1MDI@._V1_SY1000_CR0,0,1250,1000_AL_.jpg",
+        choiceA: "Toy Story 3 (2010)",
+        choiceB: "Taxi Driver (1976)",
+        choiceC: "Reservoir Dogs (1992)",
+        choiceD: "The Great Escape (1963)",
+        correct: "Taxi Driver (1976)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTg3OTAyNjg3Ml5BMl5BanBnXkFtZTcwNDI1NDc3Mw@@._V1_.jpg",
+        choiceA: "The Elephant Man (1980)",
+        choiceB: "No Country for Old Men (2007)",
+        choiceC: "Amélie (2001)",
+        choiceD: "Warrior (2011)",
+        correct: "Amélie (2001)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BOTkyNzM0ODMwNF5BMl5BanBnXkFtZTYwOTY3Nzc2._V1_.jpg",
+        choiceA: "Indiana Jones and the Last Crusade (1989)",
+        choiceB: "No Country for Old Men (2007)",
+        choiceC: "For a Few Dollars More (1965)",
+        choiceD: "Lawrence of Arabia (1962)",
+        correct: "Lawrence of Arabia (1962)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNzI0OTQyMTE0N15BMl5BanBnXkFtZTcwMTU5MzU1Mw@@._V1_SX1777_CR0,0,1777,995_AL_.jpg",
+        choiceA: "Toy Story 3 (2010)",
+        choiceB: "L.A. Confidential (1997)",
+        choiceC: "Die Hard (1988)",
+        choiceD: "Rashomon (1950)",
+        correct: "Toy Story 3 (2010)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNzc3NTA3ODg5MV5BMl5BanBnXkFtZTYwMDQ1NjQ2._V1_.jpg",
+        choiceA: "Gone Girl (2014)",
+        choiceB: "The Sting (1973)",
+        choiceC: "Persona (1966)",
+        choiceD: "How to Train Your Dragon (2010)",
+        correct: "The Sting (1973)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMzM3NTc3NzYtOTQ3Yi00ZjYyLWI0MDgtNGFiZTkyOGI1M2UzL2ltYWdlXkEyXkFqcGdeQXVyNDAxOTExNTM@._V1_.jpg",
+        choiceA: "Pan's Labyrinth (2006)",
+        choiceB: "All About Eve (1950)",
+        choiceC: "Ikiru (1952)",
+        choiceD: "My Neighbor Totoro (1988)",
+        correct: "Ikiru (1952)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjI2NjA1OTY1OV5BMl5BanBnXkFtZTgwMTc1MTEwMzE@._V1_.jpg",
+        choiceA: "Sunset Blvd. (1950)",
+        choiceB: "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964)",
+        choiceC: "Witness for the Prosecution (1957)",
+        choiceD: "Metropolis (1927)",
+        correct: "Metropolis (1927)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTY4NDEyMjU5N15BMl5BanBnXkFtZTcwNjYxNzk4Ng@@._V1_SY1000_CR0,0,1494,1000_AL_.jpg",
+        choiceA: "A Separation (2011)",
+        choiceB: "The Secret in Their Eyes (2009)",
+        choiceC: "There Will Be Blood (2007)",
+        choiceD: "Metropolis (1927)",
+        correct: "A Separation (2011)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTA5MzIwMDUzOTBeQTJeQWpwZ15BbWU3MDkzMjYzMjQ@._V1_.jpg",
+        choiceA: "The Thing (1982)",
+        choiceB: "For a Few Dollars More (1965)",
+        choiceC: "Jurassic Park (1993)",
+        choiceD: "Metropolis (1927)",
+        correct: "For a Few Dollars More (1965)"
         }]);
       });
 };
