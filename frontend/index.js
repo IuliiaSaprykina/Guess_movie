@@ -59,9 +59,11 @@ console.log(newUserForm)
                 if (!result.token){
                     $loginError.textContent = "Please check your password"
                 } else {
+                    $loginError.textContent = "";
+                    // console.log(result)
                     localStorage.setItem("token", result.token);
                     localStorage.setItem("user_id", result.user.id);
-                    $loginError.textContent = "";
+                    localStorage.setItem("username", result.user.username);
                     window.location.href = "./gamePage.html"
                 }
             })
@@ -88,9 +90,10 @@ console.log(newUserForm)
         })
         .then(response => response.json())
         .then(result => {
-            // console.log(result.user.id)
+            console.log(result.user.username)
             $userError.textContent = "";
             localStorage.setItem("user_id", result.user.id);
+            localStorage.setItem("username", result.user.username);
             localStorage.setItem("token", result.token);
             window.location.href = "./gamePage.html"
         })

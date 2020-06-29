@@ -7,9 +7,13 @@ const choiceA = document.querySelector(".btn-a");
 const choiceB = document.querySelector(".btn-b");
 const choiceC = document.querySelector(".btn-c");
 const choiceD = document.querySelector(".btn-d");
-const progress = document.querySelector(".progress");
+const progress = document.querySelector("#progress");
 const qImg = document.createElement("img");
+const answerButtons = document.getElementById("answer-buttons")
+const championList = document.querySelector('.score-container ul')
 let runningQuestion = 0;
+let score = 0;
+// console.log(championList)
 
 startButton.addEventListener('click', handleClick)
 
@@ -19,20 +23,29 @@ function handleClick(){
     startGame();
 }
 
-fetch(usersUrl)
+getScoreInfo()
+
+function getScoreInfo () {
+    return fetch(usersUrl)
     .then(parseJSON)
     .then(users => displayUsersInfo(users["user"]))
+}
 
 function displayUsersInfo(users){
-    const userScore = document.createElement('p')
-
-    const currentUser = users.filter(user => {
-        console.log(user["id"])
-        console.log(localStorage.user_id)
-        user["id"] === localStorage.user_id
+    
+    console.log(users)
+    users.sort((a, b) => {
+        return b.score - a.score
     })
-    console.log(currentUser)
+    users.map(user => {
+        const usersScore = document.createElement('li')
+        usersScore.textContent = user.username + ": " + user.score
+        
+        championList.appendChild(usersScore)
+    })
+
 }
+
 
 
 
@@ -58,36 +71,23 @@ function displayQuestion(questions) {
         questions[i] = questions[j];
         questions[j] = temp;
     }
-    console.log(questions)
-    // let j, x, i;
-    // for (i = questions.length - 1; i > 0; i--) {
-    //     j = Math.floor(Math.random() * (i + 1));
-    //     x = questions[i];
-    //     questions[i] = questions[j];
-    //     questions[j] = x;
-    // }
-    // console.log(questions)
+    
     const lastQuestion = questions.length - 1;
     renderQuestion(questions, lastQuestion, runningQuestion);
-    renderProgress(questions, lastQuestion, runningQuestion);
 }
 
 function startGame() {
     startButton.classList.add('hide');
-    renderProgress();
     questionContainerElement.classList.remove('hide');
 }
 
 function renderQuestion(questions, lastQuestion, runningQuestion){
     let q = questions[runningQuestion];
-    // const qImg = document.createElement("img");
-    console.log(runningQuestion)
     qImg.removeAttribute('src');
     choiceA.textContent = "";
     choiceB.textContent = "";
     choiceC.textContent = "";
     choiceD.textContent = "";
-
 
     qImg.src = q.shot_src;
     choiceA.textContent = q.choiceA;
@@ -95,33 +95,64 @@ function renderQuestion(questions, lastQuestion, runningQuestion){
     choiceC.textContent = q.choiceC;
     choiceD.textContent = q.choiceD;
 
-    choiceA.addEventListener("click", (event) => checkAnswer(event, q, questions,lastQuestion, runningQuestion))
+    answerButtons.addEventListener("click", (event) => checkAnswer(event, q, questions,lastQuestion, runningQuestion))
 
-    choiceB.addEventListener("click", (event) => checkAnswer(event, q, questions,lastQuestion, runningQuestion))
-
-    choiceC.addEventListener("click", (event) => checkAnswer(event, q, questions,lastQuestion, runningQuestion))
-
-    choiceD.addEventListener("click", (event) => checkAnswer(event, q, questions,lastQuestion, runningQuestion))
 
     imgContainer.append(qImg)
 }
 
 function checkAnswer(event, q, questions,lastQuestion, runningQuestion){
     if (event.target.textContent === q.correct) {
-        console.log(event.target.textContent )
-    // } else {
-        // document.querySelector('.movie-img').removeAttribute('src')
-        // console.log(document.querySelector('.movie-img'))
+        renderProgress()
         runningQuestion++;
-        renderQuestion(questions, lastQuestion, runningQuestion)
+        renderQuestion(questions, lastQuestion, runningQuestion);
+    } else {
+        // startButton.classList.remove('hide');
+        // questionContainerElement
+        // questionContainerElement.classList.add('hide');
+        // startButton.classList.remove('hide');
+        console.log("Wrong")
     }
 }
 
 function renderProgress(questions, lastQuestion, runningQuestion){
-    for(qIndex = 0; qIndex <= lastQuestion; qIndex++){
-        // progress.innerHTML += 1;
+    score ++
+    progress.textContent = "Your score is " + score
+
+    const id = localStorage.user_id
+    console.log(id)
+    const newScore = {
+        score: score
     }
+    fetch(usersUrl + id, {
+        method: "PATCH",
+        headers: {
+            'Content-type': "application/json"
+        },
+        body: JSON.stringify(newScore)
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log(result)
+    })
+    // fetch(usersUrl + localStorage.user_id, {
+    //     method: "PATCH",
+    //     headers: {
+    //         "Contrnt-type": "application/json"
+    //     },
+    //     body: JSON.stringify({ newScore })
+    // })
+    //  .then(response => response.json())
+    //  .then(result => console.log(result))
+
+
+//     getScoreInfo().then(data => {
+//             // console.log(data)
+//             progress.textContent = "Your score is " + data
+//             data ++;
+//         })
 }
+
 
 
 

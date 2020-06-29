@@ -35,8 +35,9 @@ body{
     display: block;
 }
 
-.progress{
-    position: relative;
+#progress{
+    position: absolute;
+    bottom: 10%;
     
 }
 
