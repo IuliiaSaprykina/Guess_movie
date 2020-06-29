@@ -1,3 +1,5 @@
+
+
 const startButton = document.getElementById('start-btn');
 const questionContainerElement = document.getElementById('question-container')
 const questionsUrl = "http://localhost:3000/questions/";
@@ -11,8 +13,11 @@ const progress = document.querySelector("#progress");
 const qImg = document.createElement("img");
 const answerButtons = document.getElementById("answer-buttons")
 const championList = document.querySelector('.score-container ul')
-let runningQuestion = 0;
+let runningQuestionT = 0;
 let score = 0;
+let q = "";
+let questionsT = [];
+let lastQuestionT = ""
 // console.log(championList)
 
 startButton.addEventListener('click', handleClick)
@@ -33,7 +38,7 @@ function getScoreInfo () {
 
 function displayUsersInfo(users){
     
-    console.log(users)
+    // console.log(users)
     users.sort((a, b) => {
         return b.score - a.score
     })
@@ -64,6 +69,7 @@ function parseJSON(response) {
 }
 
 function displayQuestion(questions) {
+    questionsT =questions
     
     for (var i = questions.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * i); // no +1 here!
@@ -73,7 +79,7 @@ function displayQuestion(questions) {
     }
     
     const lastQuestion = questions.length - 1;
-    renderQuestion(questions, lastQuestion, runningQuestion);
+    renderQuestion(questions, lastQuestionT, runningQuestionT);
 }
 
 function startGame() {
@@ -82,7 +88,10 @@ function startGame() {
 }
 
 function renderQuestion(questions, lastQuestion, runningQuestion){
-    let q = questions[runningQuestion];
+    lastQuestionT = lastQuestion;
+    runningQuestionT = runningQuestion;
+    questionsT = questions;
+    q = questions[runningQuestion];
     qImg.removeAttribute('src');
     choiceA.textContent = "";
     choiceB.textContent = "";
@@ -95,14 +104,19 @@ function renderQuestion(questions, lastQuestion, runningQuestion){
     choiceC.textContent = q.choiceC;
     choiceD.textContent = q.choiceD;
 
-    answerButtons.addEventListener("click", (event) => checkAnswer(event, q, questions,lastQuestion, runningQuestion))
-
-
+    
+    // choiceA.addEventListener("click", (event) => checkAnswer(event, q, questions,lastQuestion, runningQuestion))
+    
     imgContainer.append(qImg)
 }
+    answerButtons.addEventListener("click", (event) => {
+        checkAnswer(event, q, questionsT,lastQuestionT, runningQuestionT)
+    })
 
 function checkAnswer(event, q, questions,lastQuestion, runningQuestion){
+    console.log(event.target.textContent === q.correct)
     if (event.target.textContent === q.correct) {
+        console.log("This event is firing:", event)
         renderProgress()
         runningQuestion++;
         renderQuestion(questions, lastQuestion, runningQuestion);
@@ -120,7 +134,7 @@ function renderProgress(questions, lastQuestion, runningQuestion){
     progress.textContent = "Your score is " + score
 
     const id = localStorage.user_id
-    console.log(id)
+    // console.log(id)
     const newScore = {
         score: score
     }
@@ -132,9 +146,9 @@ function renderProgress(questions, lastQuestion, runningQuestion){
         body: JSON.stringify(newScore)
     })
     .then(response => response.json())
-    .then(result => {
-        console.log(result)
-    })
+    // .then(result => {
+    //     console.log(result)
+    // })
     // fetch(usersUrl + localStorage.user_id, {
     //     method: "PATCH",
     //     headers: {
