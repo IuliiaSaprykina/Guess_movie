@@ -35,11 +35,12 @@ body{
     display: block;
 }
 
-#progress{
+/* #progress{
     position: absolute;
-    bottom: 10%;
+    bottom: 3%;
     
-}
+} */
+
 
 .container{
     display: inline;
@@ -90,6 +91,11 @@ body{
     top:50px; */
     color : lightgrey;
 }
+
+#counter{
+    font-size: 3em;
+}
+
 #start:hover{
     border: 3px solid lightseagreen;
     color : lightseagreen;
@@ -105,13 +111,6 @@ body{
     display: none;
 }
 
-#timer{
-    position: absolute;
-    height : 100px;
-    width : 200px;
-    bottom : 0px;
-    text-align: center;
-}
 
 
 
