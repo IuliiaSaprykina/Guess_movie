@@ -111,8 +111,19 @@ body{
     display: none;
 }
 
+#countdown{
+    display: inline-flex;
+    align-items: center;
+    justify-self: center;
+    font-size: 50px;
+    height: 70px;
+    width: 100px;
+}
 
-
+.score-container{
+    margin: 30px;
+    font-size: x-large; 
+}
 
 
 
