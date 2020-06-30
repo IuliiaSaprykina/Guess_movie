@@ -12,34 +12,35 @@ const choiceD = document.querySelector(".btn-d");
 const progress = document.querySelector("#progress");
 const qImg = document.createElement("img");
 const answerButtons = document.getElementById("answer-buttons");
-const championList = document.querySelector('.score-container ul');
+const championList = document.querySelector('.score-container ol');
+const startingMinutes = 1;
 // const timer = document.getElementById("timer");
-let counterTimer = document.getElementById("counter")
+let counterTimer = document.getElementById("countdown")
 let runningQuestionT = 0;
 let score = 0;
 let q = "";
 let questionsT = [];
 let lastQuestionT = "";
-let counter = 0;
-let timeleft = 120;
-// console.log(championList)
+let time = startingMinutes * 60;
 
-function convertSeconds(s) {
-    let min = Math.round(s / 60);
-    let sec = s % 60;
-    return min + ":" + sec;
-}
+function timerStart() {
+    setInterval(timer, 1000)
+    
+    function timer() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
 
-function timer() {
-    counterTimer.textContent = (convertSeconds(timeleft - counter));
-
-    function timeIt() {
-        counter ++;
-        counterTimer.innerText = (convertSeconds(timeleft - counter))
+        seconds = seconds < 1 ? '0' + seconds : seconds;
+    
+        counterTimer.innerHTML = `${minutes}:${seconds}`
+        time--
+        if (time === 0) {
+            answerIsWrong()
+        }
     }
-
-    setInterval(timeIt, 1000)
 }
+
+
 
 startButton.addEventListener('click', handleClick)
 
@@ -47,7 +48,7 @@ startButton.addEventListener('click', handleClick)
 function handleClick(){
     getQuestions();
     startGame();
-    timer();
+    timerStart()
 }
 
 getScoreInfo()

@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 module.exports = knex(config)
 
 const createUser = (request, response) => {
-    const { username, password } = request.body
+    const { username, password, score } = request.body
     
     database("user")
     .select()
@@ -26,7 +26,7 @@ const createUser = (request, response) => {
             return bcrypt.hash(password, 12)
                 .then(hashedPassword => {
                     return database("user").insert({
-                        username, password_digest: hashedPassword
+                        username, password_digest: hashedPassword, score
                     }).returning("*")
                 })
                 .then(users => {
@@ -38,12 +38,6 @@ const createUser = (request, response) => {
                 })
         }
             response.send("Please choose another username")
-            // .catch(error => {
-            //     response.status(401).json({
-            //         error: error.message
-            //     })
-            // })
-        
     })
     
 }
