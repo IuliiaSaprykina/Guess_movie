@@ -11,14 +11,35 @@ const choiceC = document.querySelector(".btn-c");
 const choiceD = document.querySelector(".btn-d");
 const progress = document.querySelector("#progress");
 const qImg = document.createElement("img");
-const answerButtons = document.getElementById("answer-buttons")
-const championList = document.querySelector('.score-container ul')
+const answerButtons = document.getElementById("answer-buttons");
+const championList = document.querySelector('.score-container ul');
+// const timer = document.getElementById("timer");
+let counterTimer = document.getElementById("counter")
 let runningQuestionT = 0;
 let score = 0;
 let q = "";
 let questionsT = [];
-let lastQuestionT = ""
+let lastQuestionT = "";
+let counter = 0;
+let timeleft = 120;
 // console.log(championList)
+
+function convertSeconds(s) {
+    let min = Math.round(s / 60);
+    let sec = s % 60;
+    return min + ":" + sec;
+}
+
+function timer() {
+    counterTimer.textContent = (convertSeconds(timeleft - counter));
+
+    function timeIt() {
+        counter ++;
+        counterTimer.innerText = (convertSeconds(timeleft - counter))
+    }
+
+    setInterval(timeIt, 1000)
+}
 
 startButton.addEventListener('click', handleClick)
 
@@ -26,6 +47,7 @@ startButton.addEventListener('click', handleClick)
 function handleClick(){
     getQuestions();
     startGame();
+    timer();
 }
 
 getScoreInfo()
@@ -121,12 +143,17 @@ function checkAnswer(event, q, questions,lastQuestion, runningQuestion){
         runningQuestion++;
         renderQuestion(questions, lastQuestion, runningQuestion);
     } else {
-        // startButton.classList.remove('hide');
-        // questionContainerElement
-        // questionContainerElement.classList.add('hide');
-        // startButton.classList.remove('hide');
-        console.log("Wrong")
+        answerIsWrong()
     }
+}
+
+function answerIsWrong() {
+    startButton.classList.remove('hide');
+        // questionContainerElement
+        questionContainerElement.classList.add('hide');
+        // startButton.classList.remove('hide');
+        location.reload();
+        console.log("Wrong")
 }
 
 function renderProgress(questions, lastQuestion, runningQuestion){
