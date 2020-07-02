@@ -69,6 +69,10 @@ body, input, button {
   }
 }
 
+h1{
+  text-align: center;
+}
+
 
 
 h2 {
@@ -116,47 +120,11 @@ input.form-control {
 }
 
 button {
-    margin-top: 20px;
-    background: $button-background-color;
-    border: none;
-    font-size: 1.6em;
-    font-weight: 300;
-    padding: 5px 0;
-    width: 100%;
-    border-radius: 3px;
-    color: lighten($button-background-color, 40%);
-    border-bottom: 4px solid darken($button-background-color, 10%);
-
-    &:hover {
-        background: tint($button-background-color, 4%);
-        -webkit-animation: hop 1s;
-        animation: hop 1s;
-    }
-    }
-  }
+  
 }
 
-
-
-.float {
-  display: inline-block;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
 .login-button {
-    display: inline-block;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    
   }
 
 .create-new-user{
