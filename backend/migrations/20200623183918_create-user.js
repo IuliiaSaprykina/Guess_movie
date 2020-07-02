@@ -5,7 +5,6 @@ exports.up = function(knex) {
       table.string("username")
       table.string("password_digest")
       table.integer("score")
-      table.text("image")
   })
 };
 

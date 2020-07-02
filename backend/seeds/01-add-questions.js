@@ -167,7 +167,7 @@ exports.seed = function(knex) {
         shot_src: "https://m.media-amazon.com/images/M/MV5BMjI3NTQ3MjgzM15BMl5BanBnXkFtZTcwNDIxODY3Mw@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
         choiceA: "Harakiri (1962)",
         choiceB: "American History X (1998)",
-        choiceC: "Harakiri (1962)",
+        choiceC: "Back to the Future (1985)",
         choiceD: "Oldboy (2003)",
         correct: "American History X (1998)"
         }, {
