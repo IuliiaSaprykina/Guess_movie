@@ -4,7 +4,7 @@
     const newUserForm = document.querySelector('.new-user-form');
     const loginForm = document.querySelector('.login');
     const inputNewUserForm = document.querySelector('.new-user-form input');
-    const createNewUserButton = document.querySelector(".create-new-user");
+    const createNewUserButton = document.querySelector(".create-new-user-button");
     const loginButton = document.querySelector(".login-button");
     
 console.log(newUserForm)
