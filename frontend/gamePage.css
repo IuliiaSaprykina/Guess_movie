@@ -134,10 +134,19 @@ body{
 
 
 #start-btn{
+    color: #1d1b1b;
+    border: 1px solid white;
+    padding: 20px 80px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #e2cece;
+    border-radius: 5px;
     background-color: #e2cece;
     font-size: 2em;
     font-weight: bolder;
-    word-break: break-all;
     width:400px;
     height:250px;
     border : 2px solid lightgrey;
@@ -181,13 +190,22 @@ body{
 }
 
 #progress{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-radius: 5px;
     color: white;
 }
 
 .score-container{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-radius: 5px;
+    color: white;
     margin: 30px;
     font-size: x-large;
-    color: white; 
+
 }
 
 #timer{
