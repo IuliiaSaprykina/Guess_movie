@@ -60,10 +60,11 @@ console.log(newUserForm)
                     $loginError.textContent = "Please check your password"
                 } else {
                     $loginError.textContent = "";
-                    // console.log(result)
+                    console.log(result.user)
                     localStorage.setItem("token", result.token);
                     localStorage.setItem("user_id", result.user.id);
                     localStorage.setItem("username", result.user.username);
+                    localStorage.setItem("score", result.user.score);
                     window.location.href = "./gamePage.html"
                 }
             })
@@ -81,26 +82,31 @@ console.log(newUserForm)
             score: 0
         }
 
-        fetch(usersUrl, {
-            method: "POST",
-            headers: {
-                'Content-type': "application/json"
-            },
-            body: JSON.stringify(newUser)
-        })
-        .then(response => response.json())
-        .then(result => {
-            console.log(result.user.username)
-            $userError.textContent = "";
-            localStorage.setItem("user_id", result.user.id);
-            localStorage.setItem("username", result.user.username);
-            localStorage.setItem("token", result.token);
-            window.location.href = "./gamePage.html"
-        })
-        .catch(error => {
-            inputNewUserForm.textContent = ""
-            $userError.textContent = "Please choose another username"
-        })
+        if (newUserUsername === "") {
+            $userError.textContent = "Please write your username"
+        } else {
+            fetch(usersUrl, {
+                method: "POST",
+                headers: {
+                    'Content-type': "application/json"
+                },
+                body: JSON.stringify(newUser)
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log(result.user)
+                $userError.textContent = "";
+                localStorage.setItem("user_id", result.user.id);
+                localStorage.setItem("username", result.user.username);
+                localStorage.setItem("token", result.token);
+                localStorage.setItem("score", result.user.score);
+                window.location.href = "./gamePage.html"
+            })
+            .catch(error => {
+                inputNewUserForm.textContent = ""
+                $userError.textContent = "Please choose another username"
+            })
+        }
     })
 
 

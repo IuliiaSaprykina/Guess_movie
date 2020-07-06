@@ -15,7 +15,7 @@ $button-background-color: #27AE60;
 }
 
 html { 
-  background: url(https://s2.best-wallpaper.net/wallpaper/3840x2160/1712/Movie-projector-retro-style_3840x2160.jpg) no-repeat center center fixed; 
+  background: url(https://www.business-vector.info/wp-content/uploads/2019/04/kino.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -27,12 +27,16 @@ body {
 }
 
 body, input, button {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat';
 }
 
 button{
-  margin: 5px;
+  margin-top: 5px;
   text-transform: uppercase;
+}
+
+.input-group-addon:first-child {
+  width: 48px;
 }
 
 input, button{
@@ -43,10 +47,9 @@ input, button{
   /* text-transform: uppercase; */
   letter-spacing: 4px;
   position: relative;
-  overflow: hidden;
-  cursor: pointer;
   background-color: #b2daea;
   border-radius: 5px;
+  width: 370px;
 }
 
 @mixin normalize-input {
@@ -58,6 +61,10 @@ input, button{
   box-shadow: none;
   background: none;
   border-radius: 0px;
+}
+
+.input-group .form-control:last-child{
+  width: 322px;
 }
 
 .login {
@@ -90,7 +97,6 @@ input, button{
 
 h1{
   text-transform: uppercase;
-  cursor: pointer;
   text-align: center;
   position: relative;
 	color: #fff;
@@ -98,6 +104,27 @@ h1{
 	text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+.login-error{
+  font-size: 30px;
+  color: #fff6f6;
+  padding: 10px 40px;
+  /* text-transform: uppercase; */
+  letter-spacing: 4px;
+  position: relative;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+.user-error{
+  font-size: 30px;
+  color: #fff6f6;
+  padding: 10px 40px;
+  /* text-transform: uppercase; */
+  letter-spacing: 4px;
+  position: relative;
+  margin: 5px;
+  text-transform: uppercase;
+}
 
 
 
@@ -110,8 +137,6 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 4px;
   position: relative;
-  overflow: hidden;
-  cursor: pointer;
 }
 
 form {

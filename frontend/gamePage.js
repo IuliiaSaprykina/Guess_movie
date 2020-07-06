@@ -1,6 +1,6 @@
 
 
-const startButton = document.getElementById('start-btn');
+const startButton = document.querySelector('.fantasy');
 const questionContainerElement = document.getElementById('question-container')
 const questionsUrl = "http://localhost:3000/questions/";
 const usersUrl = "http://localhost:3000/users/";
@@ -13,6 +13,7 @@ const progress = document.querySelector("#progress");
 const qImg = document.createElement("img");
 const answerButtons = document.getElementById("answer-buttons");
 const championList = document.querySelector('.score-container ol');
+const logOutButton = document.querySelector(".log-out")
 const startingMinutes = 1;
 // const timer = document.getElementById("timer");
 let counterTimer = document.getElementById("countdown")
@@ -30,9 +31,14 @@ function timerStart() {
         const minutes = Math.floor(time / 60);
         let seconds = time % 60;
 
-        seconds = seconds < 1 ? '0' + seconds : seconds;
+        // seconds = seconds < 1 ? '0' + seconds : seconds;
+
+        if (seconds > 9) {
+            counterTimer.innerHTML = `${minutes}:${seconds}`
+        } else {
+            counterTimer.innerHTML = `${minutes}:0${seconds}`
+        }
     
-        counterTimer.innerHTML = `${minutes}:${seconds}`
         time--
         if (time === 0) {
             answerIsWrong()
@@ -40,9 +46,24 @@ function timerStart() {
     }
 }
 
+isLogIn()
 
 
-startButton.addEventListener('click', handleClick)
+function isLogIn() {
+    if (localStorage.token === undefined ) {
+        // console.log("Ku-ku")
+        window.location.href = "./"
+    } 
+}
+
+function logOut() {
+    localStorage.clear();
+    location.reload();
+}
+
+
+startButton.addEventListener('click', handleClick);
+logOutButton.addEventListener('click', logOut)
 
 
 function handleClick(){
@@ -108,6 +129,7 @@ function displayQuestion(questions) {
 function startGame() {
     startButton.classList.add('hide');
     questionContainerElement.classList.remove('hide');
+    progress.textContent = localStorage.username + ", your score is " + score
 }
 
 function renderQuestion(questions, lastQuestion, runningQuestion){
@@ -126,9 +148,6 @@ function renderQuestion(questions, lastQuestion, runningQuestion){
     choiceB.textContent = q.choiceB;
     choiceC.textContent = q.choiceC;
     choiceD.textContent = q.choiceD;
-
-    
-    // choiceA.addEventListener("click", (event) => checkAnswer(event, q, questions,lastQuestion, runningQuestion))
     
     imgContainer.append(qImg)
 }
@@ -137,9 +156,7 @@ function renderQuestion(questions, lastQuestion, runningQuestion){
     })
 
 function checkAnswer(event, q, questions,lastQuestion, runningQuestion){
-    console.log(event.target.textContent === q.correct)
     if (event.target.textContent === q.correct) {
-        console.log("This event is firing:", event)
         renderProgress()
         runningQuestion++;
         renderQuestion(questions, lastQuestion, runningQuestion);
@@ -150,30 +167,29 @@ function checkAnswer(event, q, questions,lastQuestion, runningQuestion){
 
 function answerIsWrong() {
     startButton.classList.remove('hide');
-        // questionContainerElement
-        questionContainerElement.classList.add('hide');
-        // startButton.classList.remove('hide');
-        location.reload();
-        console.log("Wrong")
+    questionContainerElement.classList.add('hide');
+    location.reload();
 }
 
 function renderProgress(questions, lastQuestion, runningQuestion){
     score ++
-    progress.textContent = "Your score is " + score
+    progress.textContent = localStorage.username + ", your score is " + score
 
     const id = localStorage.user_id
-    // console.log(id)
     const newScore = {
         score: score
     }
-    fetch(usersUrl + id, {
-        method: "PATCH",
-        headers: {
-            'Content-type': "application/json"
-        },
-        body: JSON.stringify(newScore)
-    })
-    .then(response => response.json())
+    if (score > localStorage.score) {
+        console.log("Score higher than was")
+        fetch(usersUrl + id, {
+            method: "PATCH",
+            headers: {
+                'Content-type': "application/json"
+            },
+            body: JSON.stringify(newScore)
+        })
+        .then(response => response.json())
+    }
     // .then(result => {
     //     console.log(result)
     // })
