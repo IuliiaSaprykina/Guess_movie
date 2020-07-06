@@ -1,6 +1,6 @@
 *, *::before, *::after{
     box-sizing: border-box;
-    font-family: Gotham Rounded;
+    font-family: 'Montserrat';
 }
 
 html { 
@@ -132,34 +132,70 @@ body{
     border-color: black;
 }
 
-
-#start-btn{
-    color: #1d1b1b;
-    border: 1px solid white;
-    padding: 20px 80px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    background-color: #e2cece;
+.fantasy {
+    display: inline;
+    width: 800px;
+    height: 100%;
+    max-width: 70%;
     border-radius: 5px;
-    background-color: #e2cece;
-    font-size: 2em;
-    font-weight: bolder;
-    width:400px;
-    height:250px;
-    border : 2px solid lightgrey;
-    border-radius: 15px;
-    text-align: center;
-    cursor: pointer;
-    /* position: relative;
-    left: 42.5%; */
-    /* position: absolute; */
-    /* left:300px;
-    top:50px; */
-    color : #290303;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    margin-left: 15%;
 }
+
+   .fantasy span, .fantasy:after, .double:after {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+   }
+   .fantasy:after, .double:after {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+   }
+   .fantasy {
+    letter-spacing: 4px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    position: relative;
+    font-size:2.5em;
+    background-color: #600;
+    border-width: 0.15em;
+    border-style: outset outset outset inset;
+    border-color: #c4c2c0;
+    box-shadow: 0px 0px 0.09375em #000;
+   }
+   .fantasy:after {
+    box-shadow: 0px 0px 0.25em 0.25em rgba(0,0,0,0.5) inset;
+   }
+   .double {
+    position: relative;
+    border: 0.2em double #c4c2c0;
+   }
+   .double:after {
+    box-shadow: 0px 0px 0.25em 0.2em rgba(0,0,0,0.7) inset;
+   }
+   .text {
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    color:#fffefd;
+    font-weight: bold;
+    padding: 0.5em 1.75em;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 0.15625em #000;
+    
+    background: linear-gradient(#090201, #2d0709, #721b1f);
+    border: 0.25em outset #601518; 
+   }
+
+
+
 
 #counter{
     font-size: 3em;
@@ -187,6 +223,21 @@ body{
     font-size: 50px;
     height: 70px;
     width: 100px;
+}
+
+.log-out{
+    position: absolute;
+    left: 0;
+    top: 10%;
+    color: #ece9e9;
+    border: 1px solid white;
+    padding: 20px 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    background-color: #671319a8;
+    border-style: outset outset outset inset;
+    border-radius: 5px;
 }
 
 #progress{
