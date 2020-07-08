@@ -42,27 +42,14 @@ const createUser = (request, response) => {
     
 }
 
-// const deleteUser = (request, response) => {
-//     let id = parseInt(request.params.id)
-
-//     database("user")
-//     .select()
-//     .where({ id })
-//     .first()
-//     .then(user => {
-//         delete user[id];
-//     })
-// }
-
 const updateUser = (request, response) => {
-    const { score } = request.body
-    // const id = request.params.id
+    const { score, username } = request.body
 
     database("user")
     .select()
     .where( {id: request.params.id})
     .update({
-        score: request.body.score
+        score, username
     })
     .returning("*")
     .then(user => {
@@ -88,9 +75,7 @@ const login = (request, response) => {
             const secret = "HERESYOURTOKEN"
             jwt.sign(user, secret, (error, token) => {
                 if (error) throw new Error("Problem signing jwt")
-                
-                // console.log(user, secret, token)
-                response.json({ token, user })
+                    response.json({ token, user })
             })
         }).catch(error => {
             response.status(401).json({
@@ -108,7 +93,6 @@ const allUsers = (request, response) => {
 
 function authenticate(request, response, next){
     const token  = request.headers.authorization.split(" ")[1]
-    // console.log(token)
     const secret = "HERESYOURTOKEN";
     if (!token) {
         response.sendStatus(401)
@@ -130,7 +114,6 @@ function authenticate(request, response, next){
 
 app.patch("/users/:id", updateUser);
 app.post("/users", createUser);
-// app.delete("/users/:id", deleteUser)
 app.post("/login", login);
 app.get("/users", allUsers);
 app.get("/questions", authenticate, (request, response) => {
