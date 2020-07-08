@@ -39,7 +39,7 @@ exports.seed = function(knex) {
         correct: "Schindler's List (1993)"
         }, {
         shot_src: "https://www.eyeforfilm.co.uk/images/newsite/return_Irv2Dya_600.jpg",
-        choiceA: "The Lord of the Rings: The Two Towers (2002)",
+        choiceA: "L.A. Confidential (1997)",
         choiceB: "Se7en (1995)",
         choiceC: "Life Is Beautiful (1997)",
         choiceD: "The Lord of the Rings: The Return of the King (2003)",
@@ -716,6 +716,377 @@ exports.seed = function(knex) {
         choiceC: "Jurassic Park (1993)",
         choiceD: "Metropolis (1927)",
         correct: "For a Few Dollars More (1965)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BOTk1NzE3NDU0OF5BMl5BanBnXkFtZTgwMDM3MzY3MTE@._V1_SX1463_CR0,0,1463,999_AL_.jpg",
+        choiceA: "Kill Bill: Vol. 1 (2003)",
+        choiceB: "For a Few Dollars More (1965)",
+        choiceC: "Indiana Jones and the Last Crusade (1989)",
+        choiceD: "Blade Runner (1982)",
+        correct: "Indiana Jones and the Last Crusade (1989)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjIwNTU2NDQ4N15BMl5BanBnXkFtZTcwNTU5OTIzMw@@._V1_SX1549_CR0,0,1549,999_AL_.jpg",
+        choiceA: "Kill Bill: Vol. 1 (2003)",
+        choiceB: "Monty Python and the Holy Grail (1975)",
+        choiceC: "Toy Story 3 (2010)",
+        choiceD: "Up (2009)",
+        correct: "Up (2009)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjE0MTcwMzM2Ml5BMl5BanBnXkFtZTgwMTgzNDA0MzI@._V1_SX1557_CR0,0,1557,999_AL_.jpg",
+        choiceA: "L.A. Confidential (1997)",
+        choiceB: "The Third Man (1949)",
+        choiceC: "The Deer Hunter (1978)",
+        choiceD: "Memories of Murder (2003)",
+        correct: "L.A. Confidential (1997)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTQ5NDAzNTYwOV5BMl5BanBnXkFtZTcwNTMyNDY3Mw@@._V1_SX1527_CR0,0,1527,999_AL_.jpg",
+        choiceA: "Double Indemnity (1944)",
+        choiceB: "Heat (1995)",
+        choiceC: "The Deer Hunter (1978)",
+        choiceD: "Die Hard (1988)",
+        correct: "Heat (1995)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTE1NDY5MDgtYjU0OS00MGRkLWEwMTgtZDFkOWU2NzVkZTlkXkEyXkFqcGdeQXVyNjg3MTIwODI@._V1_.jpg",
+        choiceA: "My Neighbor Totoro (1988)",
+        choiceB: "Heat (1995)",
+        choiceC: "Come and See (1985)",
+        choiceD: "The Wolf of Wall Street (2013)",
+        correct: "Come and See (1985)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNjk3MDk3NTctYzU5OC00ZTNkLThiMDUtMjFlYmZiZmY5NWJiXkEyXkFqcGdeQXVyNDk2MjQ4Mzk@._V1_.jpg",
+        choiceA: "Some Like It Hot (1959)",
+        choiceB: "All About Eve (1950)",
+        choiceC: "The Great Escape (1963)",
+        choiceD: "Green Book (2018)",
+        correct: "Green Book (2018)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTgyMDc1MDQ0OF5BMl5BanBnXkFtZTcwNTEwMzc4NA@@._V1_SY1000_CR0,0,1504,1000_AL_.jpg",
+        choiceA: "Downfall (2004)",
+        choiceB: "Batman Begins (2005)",
+        choiceC: "Howl's Moving Castle (2004)",
+        choiceD: "Green Book (2018)",
+        correct: "Downfall (2004)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BYTcwNDViNzAtOWVlZi00YWI5LTgxMzAtZTA2YTQ4ZGU5ZmQ1XkEyXkFqcGdeQXVyNjkxOTM4ODY@._V1_.jpg",
+        choiceA: "Downfall (2004)",
+        choiceB: "Children of Heaven (1997)",
+        choiceC: "Howl's Moving Castle (2004)",
+        choiceD: "Unforgiven (1992)",
+        correct: "Children of Heaven (1997)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTM4MTg2MjAzN15BMl5BanBnXkFtZTcwMTk1NzEyNw@@._V1_SX1777_CR0,0,1777,960_AL_.jpg",
+        choiceA: "A Beautiful Mind (2001)",
+        choiceB: "Casino (1995)",
+        choiceC: "Howl's Moving Castle (2004)",
+        choiceD: "Pan's Labyrinth (2006)",
+        correct: "Howl's Moving Castle (2004)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTI0MTM3NTcyNV5BMl5BanBnXkFtZTYwMTY2NTE3._V1_.jpg",
+        choiceA: "A Beautiful Mind (2001)",
+        choiceB: "Casino (1995)",
+        choiceC: "Dial M for Murder (1954)",
+        choiceD: "The Gold Rush (1925)",
+        correct: "A Beautiful Mind (2001)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTYzOTAwNDM2MV5BMl5BanBnXkFtZTYwNzc1Mjk2._V1_.jpg",
+        choiceA: "A Beautiful Mind (2001)",
+        choiceB: "Casino (1995)",
+        choiceC: "Heat (1995)",
+        choiceD: "The Sting (1973)",
+        correct: "Casino (1995)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjAzNzg3Nzc5NF5BMl5BanBnXkFtZTcwNTgyNzIwNA@@._V1_SY1000_CR0,0,1505,1000_AL_.jpg",
+        choiceA: "Ran (1985)",
+        choiceB: "Casino (1995)",
+        choiceC: "Unforgiven (1992)",
+        choiceD: "Lock, Stock and Two Smoking Barrels (1998)",
+        correct: "Unforgiven (1992)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTczNTY5NDMzOF5BMl5BanBnXkFtZTcwNDI5MDg3Mw@@._V1_SY1000_CR0,0,1504,1000_AL_.jpg",
+        choiceA: "The Secret in Their Eyes (2009)",
+        choiceB: "2001: A Space Odyssey (1968)",
+        choiceC: "Capernaum (2018)",
+        choiceD: "Pan's Labyrinth (2006)",
+        correct: "Pan's Labyrinth (2006)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTg3MTY4NDk4Nl5BMl5BanBnXkFtZTgwNjc0MzQ4MDE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "The Wolf of Wall Street (2013)",
+        choiceB: "Trainspotting (1996)",
+        choiceC: "The Truman Show (1998)",
+        choiceD: "Stalker (1979)",
+        correct: "The Wolf of Wall Street (2013)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTc5MjQzNTUwMl5BMl5BanBnXkFtZTcwODYxOTcxMw@@._V1_SY1000_CR0,0,1494,1000_AL_.jpg",
+        choiceA: "The Seventh Seal (1957)",
+        choiceB: "The Secret in Their Eyes (2009)",
+        choiceC: "The Truman Show (1998)",
+        choiceD: "Chinatown (1974)",
+        correct: "The Secret in Their Eyes (2009)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTg1NzkyNDk4N15BMl5BanBnXkFtZTgwMDE2MDIyMDE@._V1_.jpg",
+        choiceA: "The Sixth Sense (1999)",
+        choiceB: "The Secret in Their Eyes (2009)",
+        choiceC: "My Neighbor Totoro (1988)",
+        choiceD: "Jurassic Park (1993)",
+        correct: "My Neighbor Totoro (1988)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjI5MjYzODQ0OV5BMl5BanBnXkFtZTcwNzA5ODQwNw@@._V1_.jpg",
+        choiceA: "Braveheart (1995)",
+        choiceB: "Like Stars on Earth (2007)",
+        choiceC: "Amadeus (1984)",
+        choiceD: "Lock, Stock and Two Smoking Barrels (1998)",
+        correct: "Lock, Stock and Two Smoking Barrels (1998)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjExODc1NTc0OF5BMl5BanBnXkFtZTgwMjAwNzg1MDI@._V1_SY1000_CR0,0,1459,1000_AL_.jpg",
+        choiceA: "Raging Bull (1980)",
+        choiceB: "Before Sunrise (1995)",
+        choiceC: "Catch Me If You Can (2002)",
+        choiceD: "Lock, Stock and Two Smoking Barrels (1998)",
+        correct: "Raging Bull (1980)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNTg1NDgzNTQyNV5BMl5BanBnXkFtZTcwNjcwNjExNA@@._V1_SY1000_CR0,0,1503,1000_AL_.jpg",
+        choiceA: "Stand by Me (1986)",
+        choiceB: "There Will Be Blood (2007)",
+        choiceC: "Million Dollar Baby (2004)",
+        choiceD: "The Wages of Fear (1953)",
+        correct: "There Will Be Blood (2007)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BZTQ3MmQzOWEtZjNkMi00MTVkLWI0N2EtZmJkYzNkYWZhOGIyXkEyXkFqcGdeQXVyNDg2MjUxNjM@._V1_SY1000_SX1500_AL_.jpg",
+        choiceA: "Stand by Me (1986)",
+        choiceB: "Scarface (1983)",
+        choiceC: "Three Billboards Outside Ebbing, Missouri (2017)",
+        choiceD: "Lawrence of Arabia (1962)",
+        correct: "Three Billboards Outside Ebbing, Missouri (2017)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTUxMDM2ODM3N15BMl5BanBnXkFtZTcwNDk0MTYyNw@@._V1_SY1000_CR0,0,1524,1000_AL_.jpg",
+        choiceA: "Requiem for a Dream (2000)",
+        choiceB: "Eternal Sunshine of the Spotless Mind (2004)",
+        choiceC: "1917 (2019)",
+        choiceD: "V for Vendetta (2005)",
+        correct: "V for Vendetta (2005)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTc4MDczMjkyNl5BMl5BanBnXkFtZTcwNzczODI3OA@@._V1_.jpg",
+        choiceA: "No Country for Old Men (2007)",
+        choiceB: "Eternal Sunshine of the Spotless Mind (2004)",
+        choiceC: "Shutter Island (2010)",
+        choiceD: "V for Vendetta (2005)",
+        correct: "No Country for Old Men (2007)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNTkyMjg0NmItOTIzMS00YzVjLTkzZDQtNTQ0M2Y5OTdkMDkyXkEyXkFqcGdeQXVyMDc2NTEzMw@@._V1_.jpg",
+        choiceA: "Hacksaw Ridge (2016)",
+        choiceB: "The Seventh Seal (1957)",
+        choiceC: "In the Name of the Father (1993)",
+        choiceD: "To Be or Not to Be (1942)",
+        correct: "The Seventh Seal (1957)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNTI5NjUyNTMxOV5BMl5BanBnXkFtZTcwODQxNTUxMw@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "Ford v Ferrari (2019)",
+        choiceB: "Persona (1966)",
+        choiceC: "Shutter Island (2010)",
+        choiceD: "Prisoners (2013)",
+        correct: "Shutter Island (2010)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjIzMzAyOTU4OV5BMl5BanBnXkFtZTgwODMzNjE4NTE@._V1_.jpg",
+        choiceA: "The Truman Show (1998)",
+        choiceB: "Blade Runner (1982)",
+        choiceC: "Room (2015)",
+        choiceD: "Inside Out (2015)",
+        correct: "Inside Out (2015)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNTc3Njk5Mzg2MF5BMl5BanBnXkFtZTcwNjQ1NDMyNw@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "Warrior (2011)",
+        choiceB: "Memories of Murder (2003)",
+        choiceC: "Room (2015)",
+        choiceD: "Inside Out (2015)",
+        correct: "Warrior (2011)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNzk4MzAyODY4OV5BMl5BanBnXkFtZTgwMTQ2MzgyMTI@._V1_SY1000_CR0,0,1481,1000_AL_.jpg",
+        choiceA: "Hachi: A Dog's Tale (2009)",
+        choiceB: "The Elephant Man (1980)",
+        choiceC: "Ben-Hur (1959)",
+        choiceD: "Into the Wild (2007)",
+        correct: "The Elephant Man (1980)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNjM0YjNhZGMtNmExYi00YTdhLWEyMzgtNDBlOTVhZjZlMjU2XkEyXkFqcGdeQXVyNzA4MjUzNzI@._V1_SX1777_CR0,0,1777,953_AL_.jpg",
+        choiceA: "Network (1976)",
+        choiceB: "Cool Hand Luke (1967)",
+        choiceC: "Trainspotting (1996)",
+        choiceD: "Million Dollar Baby (2004)",
+        correct: "Trainspotting (1996)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTk0MzcwNjMxN15BMl5BanBnXkFtZTcwMjYyODY3Mw@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "The Sixth Sense (1999)",
+        choiceB: "The Battle of Algiers (1966)",
+        choiceC: "PK (2014)",
+        choiceD: "The Terminator (1984)",
+        correct: "The Sixth Sense (1999)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMWEzYmM4OGEtZjEwYS00YTdkLTgxN2QtYzU0ZDJkNWE5ZWRmXkEyXkFqcGdeQXVyMTE4MDg3NTIz._V1_SX1777_CR0,0,1777,749_AL_.jpg",
+        choiceA: "The Bandit (1996)",
+        choiceB: "The Thing (1982)",
+        choiceC: "The Big Lebowski (1998)",
+        choiceD: "The Terminator (1984)",
+        correct: "The Thing (1982)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTczNDgyMTg5OV5BMl5BanBnXkFtZTgwOTAzOTIwMjE@._V1_SY1000_CR0,0,1552,1000_AL_.jpg",
+        choiceA: "Jurassic Park (1993)",
+        choiceB: "Tokyo Story (1953)",
+        choiceC: "Gran Torino (2008)",
+        choiceD: "Fargo (1996)",
+        correct: "Jurassic Park (1993)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjM2NTMyMTc5MV5BMl5BanBnXkFtZTgwNDMyODE2MjI@._V1_SY1000_CR0,0,1250,1000_AL_.jpg",
+        choiceA: "Blade Runner (1982)",
+        choiceB: "Gone with the Wind (1939)",
+        choiceC: "Gran Torino (2008)",
+        choiceD: "The Bridge on the River Kwai (1957)",
+        correct: "Gone with the Wind (1939)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTkzOTAxMjE0N15BMl5BanBnXkFtZTgwODQzMzU1NzE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
+        choiceA: "Room (2015)",
+        choiceB: "The Grand Budapest Hotel (2014)",
+        choiceC: "Gran Torino (2008)",
+        choiceD: "Sherlock Jr. (1924)",
+        correct: "Room (2015)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjEyOTk5MjU4Nl5BMl5BanBnXkFtZTYwMzczODY2._V1_.jpg",
+        choiceA: "12 Years a Slave (2013)",
+        choiceB: "Finding Nemo (2003)",
+        choiceC: "Rush (2013)",
+        choiceD: "Platoon (1986)",
+        correct: "Finding Nemo (2003)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjI1MjU5MDE2Nl5BMl5BanBnXkFtZTcwNTY3NDU0NQ@@._V1_SY1000_CR0,0,1481,1000_AL_.jpg",
+        choiceA: "Logan (2017)",
+        choiceB: "Andrei Rublev (1966)",
+        choiceC: "Rush (2013)",
+        choiceD: "The Truman Show (1998)",
+        correct: "The Truman Show (1998)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTMxNjE0MzcwM15BMl5BanBnXkFtZTYwMzAxOTc3._V1_.jpg",
+        choiceA: "Kill Bill: Vol. 1 (2003)",
+        choiceB: "On the Waterfront (1954)",
+        choiceC: "Gran Torino (2008)",
+        choiceD: "The Truman Show (1998)",
+        correct: "Kill Bill: Vol. 1 (2003)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTgzOTM0MTEyNl5BMl5BanBnXkFtZTcwMzgwMzUxMg@@._V1_.jpg",
+        choiceA: "Andhadhun (2018)",
+        choiceB: "Gran Torino (2008)",
+        choiceC: "Mary and Max (2009)",
+        choiceD: "Klaus (2019)",
+        correct: "Gran Torino (2008)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTQ3NTU0NTE0MV5BMl5BanBnXkFtZTgwMzI4OTE4MzE@._V1_SX1777_CR0,0,1777,740_AL_.jpg",
+        choiceA: "Andhadhun (2018)",
+        choiceB: "The 400 Blows (1959)",
+        choiceC: "Hotel Rwanda (2004)",
+        choiceD: "Wild Tales (2014)",
+        correct: "Wild Tales (2014)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTU3NDgxNDcyN15BMl5BanBnXkFtZTgwODQwNDU0MDI@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "Hacksaw Ridge (2016)",
+        choiceB: "Witness for the Prosecution (1957)",
+        choiceC: "The Dark Knight Rises (2012)",
+        choiceD: "Avengers: Endgame (2019)",
+        correct: "Hacksaw Ridge (2016)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTQyNjUxMjU5Ml5BMl5BanBnXkFtZTgwMDk5MzM5MDE@._V1_.jpg",
+        choiceA: "Jurassic Park (1993)",
+        choiceB: "Gone Girl (2014)",
+        choiceC: "Blade Runner (1982)",
+        choiceD: "The Bridge on the River Kwai (1957)",
+        correct: "Gone Girl (2014)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTQzNzQ4NjEyOF5BMl5BanBnXkFtZTgwNDYwODYyMTE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "The Grand Budapest Hotel (2014)",
+        choiceB: "Yojimbo (1961)",
+        choiceC: "Children of Heaven (1997)",
+        choiceD: "The Great Escape (1963)",
+        correct: "The Grand Budapest Hotel (2014)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjAwNTE5NzczOV5BMl5BanBnXkFtZTgwMjcxNzM2MjI@._V1_.jpg",
+        choiceA: "Finding Nemo (2003)",
+        choiceB: "Before Sunrise (1995)",
+        choiceC: "My Father and My Son (2005)",
+        choiceD: "Memento (2000)",
+        correct: "Before Sunrise (1995)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTc5NDI4MDg3MF5BMl5BanBnXkFtZTcwMjM4OTcxNA@@._V1_SY1000_CR0,0,1526,1000_AL_.jpg",
+        choiceA: "Hotel Rwanda (2004)",
+        choiceB: "The Help (2011)",
+        choiceC: "Catch Me If You Can (2002)",
+        choiceD: "The Invisible Guest (2016)",
+        correct: "Catch Me If You Can (2002)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BZGFmZDQwNDUtMzM1Yy00N2Y3LTlhNWYtOGZhZWE5MmUwZjViXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SY1000_SX1500_AL_.jpg",
+        choiceA: "Oldboy (2003)",
+        choiceB: "Ford v Ferrari (2019)",
+        choiceC: "The Usual Suspects (1995)",
+        choiceD: "Terminator 2: Judgment Day (1991)",
+        correct: "Ford v Ferrari (2019)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTU3MjA5NTM2Ml5BMl5BanBnXkFtZTcwNDQwNDAzMw@@._V1_SX1777_CR0,0,1777,754_AL_.jpg",
+        choiceA: "It Happened One Night (1934)",
+        choiceB: "Ford v Ferrari (2019)",
+        choiceC: "How to Train Your Dragon (2010)",
+        choiceD: "The Princess Bride (1987)",
+        correct: "How to Train Your Dragon (2010)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTc2Njk0MjgxM15BMl5BanBnXkFtZTgwNjk0MjcxMDE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
+        choiceA: "A Clockwork Orange (1971)",
+        choiceB: "Scarface (1983)",
+        choiceC: "L.A. Confidential (1997)",
+        choiceD: "Prisoners (2013)",
+        correct: "Prisoners (2013)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTM5MTU3MDQ4Ml5BMl5BanBnXkFtZTgwOTQ5MTE0MDE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "12 Years a Slave (2013)",
+        choiceB: "Logan (2017)",
+        choiceC: "The Third Man (1949)",
+        choiceD: "Wild Tales (2014)",
+        correct: "12 Years a Slave (2013)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjAzMTA3Nzc4Nl5BMl5BanBnXkFtZTcwMzU0ODcxNA@@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
+        choiceA: "12 Years a Slave (2013)",
+        choiceB: "Into the Wild (2007)",
+        choiceC: "The Matrix (1999)",
+        choiceD: "The Lord of the Rings: The Two Towers (2002)",
+        correct: "Into the Wild (2007)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNzM4OTkzMjcxOF5BMl5BanBnXkFtZTgwMTkxMjI1MTI@._V1_SX1777_CR0,0,1777,738_AL_.jpg",
+        choiceA: "The Matrix (1999)",
+        choiceB: "Inception (2010)",
+        choiceC: "Fight Club (1999)",
+        choiceD: "One Flew Over the Cuckoo's Nest (1975)",
+        correct: "The Matrix (1999)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BM2NmYjU4ODEtZjhjYi00MGNiLTg3NGMtZjUxNGIzOWZhYmRkXkEyXkFqcGdeQXVyMDgyNjA5MA@@._V1_.jpg",
+        choiceA: "The Matrix (1999)",
+        choiceB: "Hachi: A Dog's Tale (2009)",
+        choiceC: "Ben-Hur (1959)",
+        choiceD: "Stand by Me (1986)",
+        correct: "Hachi: A Dog's Tale (2009)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTQ3ODk1OTI4M15BMl5BanBnXkFtZTgwMTU4ODIwMjE@._V1_SY1000_CR0,0,1531,1000_AL_.jpg",
+        choiceA: "Gangs of Wasseypur (2012)",
+        choiceB: "Hachi: A Dog's Tale (2009)",
+        choiceC: "Dead Poets Society (1989)",
+        choiceD: "Before Sunset (2004)",
+        correct: "Dead Poets Society (1989)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMTUyNDU4NTgyN15BMl5BanBnXkFtZTcwNTQwMDY4NQ@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
+        choiceA: "Throne of Blood (1957)",
+        choiceB: "Gladiator (2000)",
+        choiceC: "Terminator 2: Judgment Day (1991)",
+        choiceD: "Harry Potter and the Deathly Hallows: Part 2 (2011)",
+        correct: "Harry Potter and the Deathly Hallows: Part 2 (2011)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BMjEzNDgwOTM1Ml5BMl5BanBnXkFtZTcwNTg3Njc0NQ@@._V1_SY1000_CR0,0,1302,1000_AL_.jpg",
+        choiceA: "Andrei Rublev (1966)",
+        choiceB: "The Secret in Their Eyes (2009)",
+        choiceC: "Terminator 2: Judgment Day (1991)",
+        choiceD: "My Neighbor Totoro (1988)",
+        correct: "Andrei Rublev (1966)"
         }]);
       });
 };
