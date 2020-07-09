@@ -1,5 +1,3 @@
-
-
 const startButton = document.querySelector('.fantasy');
 const questionContainerElement = document.getElementById('question-container')
 const questionsUrl = "http://localhost:3000/questions/";
@@ -15,13 +13,11 @@ const answerButtons = document.getElementById("answer-buttons");
 const championList = document.querySelector('.score-container ol');
 const logOutButton = document.querySelector(".log-out")
 const startingMinutes = 1;
-// const timer = document.getElementById("timer");
 let counterTimer = document.getElementById("countdown")
 let runningQuestionT = 0;
 let score = 0;
 let q = "";
 let questionsT = [];
-let lastQuestionT = "";
 let time = startingMinutes * 60;
 
 function timerStart() {
@@ -31,14 +27,11 @@ function timerStart() {
         const minutes = Math.floor(time / 60);
         let seconds = time % 60;
 
-        // seconds = seconds < 1 ? '0' + seconds : seconds;
-
         if (seconds > 9) {
             counterTimer.innerHTML = `${minutes}:${seconds}`
         } else {
             counterTimer.innerHTML = `${minutes}:0${seconds}`
         }
-    
         time--
         if (time === 0) {
             answerIsWrong()
@@ -51,7 +44,6 @@ isLogIn()
 
 function isLogIn() {
     if (localStorage.token === undefined ) {
-        // console.log("Ku-ku")
         window.location.href = "./"
     } 
 }
@@ -81,8 +73,6 @@ function getScoreInfo () {
 }
 
 function displayUsersInfo(users){
-    
-    // console.log(users)
     users.sort((a, b) => {
         return b.score - a.score
     })
@@ -94,8 +84,6 @@ function displayUsersInfo(users){
     })
 
 }
-
-
 
 
 function getQuestions() {
@@ -116,14 +104,14 @@ function displayQuestion(questions) {
     questionsT =questions
     
     for (var i = questions.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * i); // no +1 here!
+        var j = Math.floor(Math.random() * i); 
         var temp = questions[i];
         questions[i] = questions[j];
         questions[j] = temp;
     }
     
     const lastQuestion = questions.length - 1;
-    renderQuestion(questions, lastQuestionT, runningQuestionT);
+    renderQuestion(questions, runningQuestionT);
 }
 
 function startGame() {
@@ -132,8 +120,7 @@ function startGame() {
     progress.textContent = localStorage.username + ", your score is " + score
 }
 
-function renderQuestion(questions, lastQuestion, runningQuestion){
-    lastQuestionT = lastQuestion;
+function renderQuestion(questions, runningQuestion){
     runningQuestionT = runningQuestion;
     questionsT = questions;
     q = questions[runningQuestion];
@@ -152,14 +139,14 @@ function renderQuestion(questions, lastQuestion, runningQuestion){
     imgContainer.append(qImg)
 }
     answerButtons.addEventListener("click", (event) => {
-        checkAnswer(event, q, questionsT,lastQuestionT, runningQuestionT)
+        checkAnswer(event, q, questionsT, runningQuestionT)
     })
 
-function checkAnswer(event, q, questions,lastQuestion, runningQuestion){
+function checkAnswer(event, q, questions, runningQuestion){
     if (event.target.textContent === q.correct) {
         renderProgress()
         runningQuestion++;
-        renderQuestion(questions, lastQuestion, runningQuestion);
+        renderQuestion(questions, runningQuestion);
     } else {
         answerIsWrong()
     }
@@ -171,8 +158,8 @@ function answerIsWrong() {
     location.reload();
 }
 
-function renderProgress(questions, lastQuestion, runningQuestion){
-    score ++
+function renderProgress(){
+    score++
     progress.textContent = localStorage.username + ", your score is " + score
 
     const id = localStorage.user_id
@@ -180,7 +167,7 @@ function renderProgress(questions, lastQuestion, runningQuestion){
         score: score
     }
     if (score > localStorage.score) {
-        console.log("Score higher than was")
+        localStorage.setItem("score", score)
         fetch(usersUrl + id, {
             method: "PATCH",
             headers: {
@@ -189,26 +176,8 @@ function renderProgress(questions, lastQuestion, runningQuestion){
             body: JSON.stringify(newScore)
         })
         .then(response => response.json())
+       
     }
-    // .then(result => {
-    //     console.log(result)
-    // })
-    // fetch(usersUrl + localStorage.user_id, {
-    //     method: "PATCH",
-    //     headers: {
-    //         "Contrnt-type": "application/json"
-    //     },
-    //     body: JSON.stringify({ newScore })
-    // })
-    //  .then(response => response.json())
-    //  .then(result => console.log(result))
-
-
-//     getScoreInfo().then(data => {
-//             // console.log(data)
-//             progress.textContent = "Your score is " + data
-//             data ++;
-//         })
 }
 
 
