@@ -1087,6 +1087,27 @@ exports.seed = function(knex) {
         choiceC: "Terminator 2: Judgment Day (1991)",
         choiceD: "My Neighbor Totoro (1988)",
         correct: "Andrei Rublev (1966)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNWQzYzFkM2ItOWYxYi00YjEwLTlhMzctYTBkNDVmZDc3NTlhXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_SY1000_CR0,0,1500,1000_AL_.jpg",
+        choiceA: "Andrei Rublev (1966)",
+        choiceB: "The Old Guard (2020)",
+        choiceC: "Greyhound (2020)",
+        choiceD: "Watchmen (2019)",
+        correct: "The Old Guard (2020)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BNWZlMTRhZGItMGU5Ni00ZWQ2LTk2NjEtNzFiMTM3NzhmMTVjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SY1000_SX1500_AL_.jpg",
+        choiceA: "Tenet (2020)",
+        choiceB: "The Old Guard (2020)",
+        choiceC: "Watchmen (2019)",
+        choiceD: "Deep Blue Sea 3 (2020)",
+        correct: "Watchmen (2019)"
+        }, {
+        shot_src: "https://m.media-amazon.com/images/M/MV5BN2E1M2FmZDYtZGNhZi00ODZiLWI1YTAtZjJlZTY3NjMyNDI3XkEyXkFqcGdeQXVyMTk5MjkzMjU@._V1_SX1777_CR0,0,1777,744_AL_.jpg",
+        choiceA: "Tenet (2020)",
+        choiceB: "Avengers: Endgame (2019)",
+        choiceC: "The Silencing (2020)",
+        choiceD: "The Gentlemen (2019)",
+        correct: "The Gentlemen (2019)"
         }]);
       });
 };
